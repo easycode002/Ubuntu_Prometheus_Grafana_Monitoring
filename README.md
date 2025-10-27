@@ -205,4 +205,5 @@ Login grafan => Connections => Data Source => Add Data source => Prometheus => p
 ```sh
 Login grafana => Dashborad => Import Dashborad => put `14513` => Load
 ```
-- [Reff](https://www.fosstechnix.com/install-prometheus-and-grafana-on-ubuntu-24-04/)
+[Refference: Installation and Configuration](https://www.fosstechnix.com/install-prometheus-and-grafana-on-ubuntu-24-04/)
+## [How to Install those from Ubuntu?](https://github.com/easycode002/Ubuntu_Prometheus_Grafana_Monitoring/blob/main/Delete.README.md)
