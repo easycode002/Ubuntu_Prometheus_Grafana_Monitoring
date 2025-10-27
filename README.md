@@ -158,3 +158,50 @@ sudo nano /etc/prometheus/prometheus.yml
 sudo systemctl restart prometheus
 ```
 - Hit the URL in your web browser to check weather our target is successfully scraped by Prometheus or not
+
+## Step #9:Install Grafana on Ubuntu 24.04 LTS
+- Add the Grafana GPG key in Ubuntu using wget
+```sh
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+- Next, add the Grafana repository to your APT sources:
+```sh
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+```
+- Refresh your APT cache to update your package lists:
+```sh
+sudo apt update
+```
+- You can now proceed with the installation:
+```sh
+sudo apt install grafana
+```
+- Once Grafana is installed, use systemctl to start the Grafana server:
+```sh
+sudo systemctl start grafana-server
+```
+- Next, verify that Grafana is running by checking the service’s status:
+```sh
+sudo systemctl status grafana-server
+sudo systemctl enable grafana-server
+```
+- Access grafana on browser
+```sh
+http://your_ip:3000
+```
+- NOTE***: the username and password of grafana is default
+```sh
+username    : admin
+password    : admin
+```
+
+## Step #10:Configure Prometheus as Grafana DataSource
+- Configure Prometheus as Grafana DataSource
+```sh
+Login grafan => Connections => Data Source => Add Data source => Prometheus => pass url Prometheus => `Save & Test`
+```
+
+## Step #11:Creating Grafana Dashboard to Monitor Linux Server
+```sh
+Login grafana => Dashborad => Import Dashborad => put `14513` => Load
+```
